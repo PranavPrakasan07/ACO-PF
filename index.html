@@ -4,20 +4,75 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>Unity WebGL Player | PortfolioWebsite</title>
-  <script src="Build/UnityLoader.js"></script>
-  <script>
-    UnityLoader.instantiate("unityContainer", "Build/Interface.json");
-  </script>
+  <title>ACO Run</title>
+  <link rel="shortcut icon" href="TemplateData/favicon.ico">
 
-  <link rel="stylesheet" href="/css/main.css">
+  <!-- <script>
+  <script src="Build/UnityLoader.js"></script>
+    UnityLoader.instantiate("unityContainer", "Build/Interface.json");
+  </script> -->
+
+  <!-- <link rel="text/css" href="./css/main.css"> -->
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #1F1F1F;
+    }
+
+    .container {
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .unityContainer {
+      vertical-align: middle;
+      width: 95vw;
+      text-align: center;
+      margin: 0 auto;
+      border-radius: 25px;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .inputs {
+      flex: 75vw;
+      background-color: aliceblue;
+    }
+
+    .controls {
+      flex: 25vw;
+      background-color: aliceblue;
+    }
+
+    @media (max-width: 800px) {
+
+      .inputs,
+      .controls {
+        flex: 100%;
+      }
+    }
+  </style>
 
 </head>
 
 <body>
-  <center>
-      <div class="unityContainer" id="unityContainer" style="width: 90vw; height: 600px; margin: auto;"></div>
-  </center>
+
+  <div class="unityContainer" id="unityContainer"></div>
+
+  <div class="flex-container">
+    <div class="inputs"></div>
+    <div class="controls"></div>
+  </div>
+
+
+
 </body>
 
 </html>

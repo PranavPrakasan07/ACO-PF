@@ -13,7 +13,29 @@ body{
 
 .unityContainer{
     vertical-align: middle;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    width: 95vw; 
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 25px;
 }
+
+.flex-container{
+    display: flex;  
+    flex-wrap: wrap;
+}
+
+.inputs{
+    flex: 75vw;
+    background-color: aliceblue;
+}
+
+.controls{
+    flex: 25vw;
+    background-color: aliceblue;
+}
+
+@media (max-width: 800px) {
+    .inputs, .controls {
+      flex: 100%;
+    }
+  }
