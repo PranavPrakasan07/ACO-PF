@@ -15,6 +15,21 @@
   <!-- <link rel="text/css" href="./css/main.css"> -->
 
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+    * {
+      box-sizing: border-box;
+      background-color: #1e1e1e;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+    }
+
     html {
       scroll-behavior: smooth;
     }
@@ -23,16 +38,46 @@
       background-color: #1F1F1F;
     }
 
-    .container {
-      height: 100vh;
-      width: 100vw;
+    .arrow-container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+
+    .arrow-button {
+      margin: 8px;
+    }
+
+    .arrow-button:hover {
+      opacity: 50%;
+    }
+
+    fieldset {
+      margin: 8px;
+      width: fit-content;
+      border-radius: 10px;
+      border-color: #2C2F33;
+      border-style: solid;
+    }
+
+    input {
+      color: #1F1F1F;
+      font-family: 'Poppins', sans-serif;
+      background-color: white;
+      font-size: 14px;
+      padding: 8px;
+      border-radius: 10px;
+      margin: 12px;
+      border: 0px;
     }
 
     .unityContainer {
       vertical-align: middle;
       width: 95vw;
+      height: 95vh;
       text-align: center;
       margin: 0 auto;
+      background-color: #1E1E1E;
       border-radius: 25px;
     }
 
@@ -43,12 +88,26 @@
 
     .inputs {
       flex: 75vw;
+      width: fit-content;
       background-color: aliceblue;
     }
 
     .controls {
       flex: 25vw;
+      width: fit-content;
       background-color: aliceblue;
+    }
+
+    .set-button{
+      color: #1F1F1F;
+      background-color: white;
+      margin: 12px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .set-button:hover{
+      opacity: 50%;
     }
 
     @media (max-width: 800px) {
@@ -64,13 +123,40 @@
 
 <body>
 
-  <div class="unityContainer" id="unityContainer"></div>
+  <div class="unityContainer" id="unityContainer">h</div>
 
   <div class="flex-container">
     <div class="inputs"></div>
-    <div class="controls"></div>
+    <div class="controls">
+    </div>
   </div>
 
+  <fieldset>
+    <legend>
+      Controls
+    </legend>
+    <div class="arrow-container">
+      <div class="arrow-button">
+        <img src="images/up.svg" width="50px">
+      </div>
+      <div class="arrow-button">
+        <img src="images/down.svg" width="50px">
+      </div>
+      <div class="arrow-button">
+        <img src="images/left.svg" width="50px">
+      </div>
+      <div class="arrow-button">
+        <img src="images/right.svg" width="50px">
+      </div>
+
+      <input placeholder="Obstacle No." type="text">
+      
+      <div class="set-button">
+        Choose 
+      </div>
+
+    </div>
+  </fieldset>
 
 
 </body>
