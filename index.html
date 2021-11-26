@@ -6,6 +6,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>ACO Run</title>
   <link rel="shortcut icon" href="TemplateData/favicon.ico">
+  <link rel="icon" href="images/tick.svg">
 
   <!-- <script>
   <script src="Build/UnityLoader.js"></script>
@@ -34,6 +35,28 @@
       scroll-behavior: smooth;
     }
 
+    /* width */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #1F1F1F;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #2E2E2E;
+      border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #3D3D3D;
+    }
+
+
     body {
       background-color: #1F1F1F;
     }
@@ -46,9 +69,21 @@
 
     .arrow-button {
       margin: 8px;
+      cursor: pointer;
     }
 
     .arrow-button:hover {
+      opacity: 50%;
+    }
+
+    .set-button {
+      color: #1F1F1F;
+      margin: 8px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .set-button:hover {
       opacity: 50%;
     }
 
@@ -65,7 +100,7 @@
       font-family: 'Poppins', sans-serif;
       background-color: white;
       font-size: 14px;
-      padding: 8px;
+      padding: 4px;
       border-radius: 10px;
       margin: 12px;
       border: 0px;
@@ -96,18 +131,7 @@
       flex: 25vw;
       width: fit-content;
       background-color: aliceblue;
-    }
-
-    .set-button{
-      color: #1F1F1F;
-      background-color: white;
-      margin: 12px;
-      border-radius: 10px;
-      text-align: center;
-    }
-
-    .set-button:hover{
-      opacity: 50%;
+      margin: 16px;
     }
 
     @media (max-width: 800px) {
@@ -123,7 +147,11 @@
 
 <body>
 
-  <div class="unityContainer" id="unityContainer">h</div>
+  <div class="unityContainer" id="unityContainer">
+    <br>
+    Path Finding with ACO
+    <br>
+  </div>
 
   <div class="flex-container">
     <div class="inputs"></div>
@@ -150,14 +178,26 @@
       </div>
 
       <input placeholder="Obstacle No." type="text">
-      
+
       <div class="set-button">
-        Choose 
+        <img src="images/tick.svg" width="50px">
       </div>
 
     </div>
   </fieldset>
 
+  <fieldset>
+    <legend>
+      Simulate
+    </legend>
+    <div class="arrow-container">
+
+      <div class="set-button">
+        <img src="images/tick.svg" width="50px">
+      </div>
+
+    </div>
+  </fieldset>
 
 </body>
 
